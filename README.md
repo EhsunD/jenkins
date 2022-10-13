@@ -1,5 +1,3 @@
 # jenkins
 
 hello world!!
-
-bye!!
