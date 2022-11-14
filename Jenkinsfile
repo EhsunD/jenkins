@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             when {
-                branch 'main'
+                branch "main"
             }
             steps {
                 echo 'Hello World'
@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Bye') {
             when {
-                branch 'Ehsan'
+                branch "Ehsan"
             }
             steps {
                 echo 'Bye World'
