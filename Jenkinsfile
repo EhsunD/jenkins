@@ -3,19 +3,21 @@ pipeline {
 
     stages {
         stage('Hello') {
-            when {
-                branch 'main'
-            }
             steps {
-                echo 'Hello World'
+                script{
+                    if (env.BRANCH_NAME == 'main') {
+                        echo 'we are main branch'
+                    }
+                }
             }
         }
         stage('master') {
-            when {
-                branch 'master'
-            }
-            steps{
-                echo 'we are master'
+            steps {
+                script{
+                    if (env.BRANCH_NAME == 'master') {
+                        echo 'we are master branch'
+                    }
+                }
             }
         }
     }
