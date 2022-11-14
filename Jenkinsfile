@@ -1,6 +1,6 @@
 pipeline {
 
-    agent any
+    agent none
     /*triggers {
       #triggered by changes in every branch
     }*/
