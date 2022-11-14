@@ -1,8 +1,8 @@
 pipeline {
 
-    triggers {
-      # triggered by changes in every branch
-    }
+    /*triggers {
+      #triggered by changes in every branch
+    }*/
     stages {
       stage('first-stage'){
         when { anyOf { branch 'feature-branch/*'; branch 'main' } }
