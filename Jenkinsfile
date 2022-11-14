@@ -6,7 +6,7 @@ pipeline {
     }*/
     stages {
       stage('first-stage'){
-        when { branch '/*' }
+        when { branch '' }
         steps{
           echo 'hello world'
         }
