@@ -15,5 +15,4 @@
                 echo 'we are master'
             }
         }
-    }
-}
+    }}
