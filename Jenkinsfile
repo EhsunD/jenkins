@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Bye') {
             when {
-                branch 'Main'
+                branch 'main'
             }
             steps {
                 echo 'Bye World'
