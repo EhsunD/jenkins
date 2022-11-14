@@ -6,7 +6,7 @@ pipeline {
     }*/
     stages {
       stage('first-stage'){
-        when { branch 'main^{commit}' }
+        when { branch 'main^' }
         steps{
           echo 'hello world'
         }
