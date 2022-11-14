@@ -5,7 +5,7 @@ pipeline {
       #triggered by changes in every branch
     }*/
     stages {
-      stage('first-stage'){
+      when('first-stage'){
         agent { branch 'main' }
         steps{
           echo 'hello world'
