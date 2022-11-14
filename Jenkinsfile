@@ -1,4 +1,5 @@
- stages {
+pipeline{ 
+stages {
         stage('Hello') {
             when {
                 branch 'main'
@@ -16,3 +17,4 @@
             }
         }
  }
+}
