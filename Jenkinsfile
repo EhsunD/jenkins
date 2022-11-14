@@ -1,11 +1,11 @@
 pipeline {
 
-    agent any
+    agent none
     /*triggers {
       #triggered by changes in every branch
     }*/
     stages {
-      when('first-stage'){
+      stage ('first-stage'){
         agent { branch 'main' }
         steps{
           echo 'hello world'
