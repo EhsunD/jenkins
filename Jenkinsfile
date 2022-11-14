@@ -1,22 +1,28 @@
 pipeline {
-    agent any
 
+    triggers {
+      # triggered by changes in every branch
+    }
     stages {
-        stage('Hello') {
-            when {
-                branch 'main'
-            }
-            steps {
-                echo 'Hello World'
-            }
+      stage('first-stage'){
+        when { anyOf { branch 'feature-branch/*'; branch 'main' } }
+        steps{
+          echo 'hello world'
         }
-        stage('Bye') {
-            when {
-                branch "Ehsan"
-            }
-            steps {
-                echo 'Bye World'
-            }
+      }
+      stage('second-stage'){
+        when {
+          not {
+            branch 'release/*'
+          }
+          not {
+            branch 'Ehsan'
+          }
         }
+        steps{
+          echo 'bye'
+        }
+      }
+
     }
 }
