@@ -14,7 +14,7 @@ pipeline {
       stage('second-stage'){
         when {
           not {
-            branch 'release/*'
+            branch 'main'
           }
           not {
             branch 'Ehsan'
