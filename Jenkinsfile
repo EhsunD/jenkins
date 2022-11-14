@@ -6,7 +6,7 @@ pipeline {
     }*/
     stages {
       stage('first-stage'){
-        when { anyOf { branch 'feature-branch/*'; branch 'main' } }
+        when { anyOf { branch 'feature-branch/*'; branch 'main/*' } }
         steps{
           echo 'hello world'
         }
