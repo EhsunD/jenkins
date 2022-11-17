@@ -10,7 +10,6 @@ pipeline {
             echo 'hello world'
         }
       }
-     }
       stage('second-stage'){
         when {
           not {
