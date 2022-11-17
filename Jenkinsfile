@@ -21,7 +21,7 @@ pipeline {
           }
         }
         steps{
-          echo 'bye'
+          echo branch
         }
       }
 
