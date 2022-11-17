@@ -13,10 +13,10 @@ pipeline {
       stage('second-stage'){
         when {
           not {
-            env.GIT_BRANCH "main"
+            branch "main"
           }
           not {
-            env.GIT_BRANCH "Ehsan"
+            branch "Ehsan"
           }
         }
         steps{
