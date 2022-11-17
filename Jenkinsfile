@@ -6,11 +6,11 @@ pipeline {
     }*/
     stages {
       stage ('first-stage'){
+          steps{
           if ( env.GIT_BRANCH == "orogin/main" ){
-              steps{
                   echo 'hello world'
-              }
         }
+          }
       }
       stage('second-stage'){
         when {
