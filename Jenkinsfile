@@ -8,7 +8,7 @@ pipeline {
       stage ('first-stage'){
           steps{
               script{
-          if ( env.GIT_BRANCH == "orogin/main" ){
+          if ( env.GIT_BRANCH == "origin/main" ){
                   echo 'hello world'
         }
               }
