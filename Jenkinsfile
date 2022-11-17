@@ -6,7 +6,7 @@ pipeline {
     }*/
     stages {
       stage ('first-stage'){
-        when { branch 'main' }
+        when { env.GIT_BRANCH 'main' }
         steps{
           echo 'hello world'
         }
@@ -14,10 +14,10 @@ pipeline {
       stage('second-stage'){
         when {
           not {
-            branch'main'
+            env.GIT_BRANCH'main'
           }
           not {
-            branch'Ehsan'
+            env.GIT_BRANCH'Ehsan'
           }
         }
         steps{
