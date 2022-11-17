@@ -6,7 +6,7 @@ pipeline {
     }*/
     stages {
       stage ('first-stage'){
-        when { env.GIT_BRANCH == "main" }
+        when { env.GIT_BRANCH in "orogin/main" }
         steps{
           echo 'hello world'
         }
@@ -14,10 +14,10 @@ pipeline {
       stage('second-stage'){
         when {
           not {
-            env.GIT_BRANCH == "main"
+            env.GIT_BRANCH in "main"
           }
           not {
-            env.GIT_BRANCH == "Ehsan"
+            env.GIT_BRANCH in "Ehsan"
           }
         }
         steps{
