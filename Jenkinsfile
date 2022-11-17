@@ -7,9 +7,11 @@ pipeline {
     stages {
       stage ('first-stage'){
           steps{
+              script{
           if ( env.GIT_BRANCH == "orogin/main" ){
                   echo 'hello world'
         }
+              }
           }
       }
       stage('second-stage'){
